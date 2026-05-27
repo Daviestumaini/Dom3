@@ -3,49 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>GadgetHub | Accessible Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Tech Solutions</h1>
-        <>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." id="searchInput">
-            <button onclick="search()">Search</button>
-        </div>
-        <div class="cart" onclick="goToCart()">
-            <span class="cart-icon">🛒</span>
-            <span class="cart-count" id="cartCount">0</span>
-        </div>
+        <a href="#" class="logo-btn" id="nav-home" aria-label="GadgetHub Home"> GadgetHub </a>
+        <nav aria-label="Main Navigation">
+            <button class="cart-icon" id="nav-cart" aria-haspopup="true" aria-label="View shopping cart">
+                 Cart (<span id="cart-count">0</span>)
+            </button>
         </nav>
     </header>
-    <main>
-        <section class="filters">
-           <button class="filter-btn active" data-category="all">All Products</button>
-            <button class="filter-btn" data-category="phone">Phones</button>
-            <button class="filter-btn" data-category="laptop">Laptops</button>
-        </section>
 
-        <section class="product-grid" id="product-container"></section>
+    <main id="app-viewport" aria-live="polite"></main>
 
- <aside class="cart-sidebar" id="cart-sidebar">
-        <h2>Your Cart</h2>
-        <div id="cart-items">
-            <h3>Total: $<span id="cart-total-price">0.00</span></h3>
-        </div>
-        <button onclick="checkout()">Checkout</button>
- </aside>
-    </main>
     <footer>
-        <p>&copy; 2024 Tech Solutions. All rights reserved.</p>
+        <p>&copy; 2026 GadgetHub. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
