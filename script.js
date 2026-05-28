@@ -1,15 +1,15 @@
 // A simple e-commerce SPA built with vanilla JavaScript, demonstrating state management, dynamic rendering, and user interaction handling without any external libraries or frameworks. The application allows users to browse products, manage their shopping cart, and proceed through a checkout process with multiple payment options.
 const PRODUCTS = Object.freeze([
-    { id: 1, name: "iPhone 15 Pro", price: 999, category: "phone", desc: "A17 Pro chip, premium Titanium build with stunning action button integrations.", img: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80" },
-    { id: 2, name: "Galaxy S24 Ultra", price: 1199, category: "phone", desc: "Integrated S-Pen, dynamic Galaxy AI tools, and an elite 200MP camera system.", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80" },
-    { id: 3, name: "MacBook Pro 14\"", price: 1599, category: "laptop", desc: "Apple M3 Framework, beautiful Liquid Retina XDR screen display, ultimate battery runtime.", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80" },
+    { id: 1, name: "iPhone 15 Pro", price: 299, category: "phone", desc: "A17 Pro chip, premium Titanium build with stunning action button integrations.", img: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80" },
+    { id: 2, name: "Galaxy S24 Ultra", price: 199, category: "phone", desc: "Integrated S-Pen, dynamic Galaxy AI tools, and an elite 200MP camera system.", img: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80" },
+    { id: 3, name: "MacBook Pro 14\"", price: 599, category: "laptop", desc: "Apple M3 Framework, beautiful Liquid Retina XDR screen display, ultimate battery runtime.", img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80" },
     { id: 4, name: "Dell XPS 13", price: 1299, category: "laptop", desc: "Intel Core Ultra processors matching seamless InfinityEdge premium glass monitors.", img: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&q=80" },
-    { id: 5, name: "Google Pixel 8 Pro", price: 899, category: "phone", desc: "Google Tensor G3 chip, advanced AI features, and a pro-grade camera system.", img: "https://images.unsplash.com/photo-1682687226319-1a2b4c3d4e5f?w=500&q=80" },
-    { id: 6, name: "HP Spectre x360", price: 1399, category: "laptop", desc: "Convertible design with powerful performance and stunning OLED display.", img: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&q=80" },
-    { id: 7, name: "OnePlus 11 Pro", price: 899, category: "phone", desc: "Snapdragon 8 Gen 2, Hasselblad Camera for Mobile, and ultra-fast charging.", img: "https://images.unsplash.com/photo-1679875816599-1a2b3c4d5e6f?w=500&q=80" },
-    { id: 8, name: "Lenovo ThinkPad X1 Carbon", price: 1499, category: "laptop", desc: "Business-class performance with a lightweight design and robust security features.", img: "https://images.unsplash.com/photo-1587825140708-1a2b3c4d5e6f?w=500&q=80" },
-    { id: 9, name: "Sony Xperia 1 IV", price: 1199, category: "phone", desc: "4K HDR OLED display, pro-grade camera system, and high-fidelity audio.", img: "https://images.unsplash.com/photo-1682687226319-1a2b4c3d4e5f?w=500&q=80" },
-    { id: 10, name: "Asus ROG Zephyrus G14", price: 1499, category: "laptop", desc: "Gaming powerhouse with AMD Ryzen processors and a stunning AniMe Matrix display.", img: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&q=80"
+    { id: 5, name: "Google Pixel 8 Pro", price: 599, category: "phone", desc: "Google Tensor G3 chip, advanced AI features, and a pro-grade camera system.", img: "https://images.unsplash.com/photo-1682687226319-1a2b4c3d4e5f?w=500&q=80" },
+    { id: 6, name: "HP Spectre x360", price: 699, category: "laptop", desc: "Convertible design with powerful performance and stunning OLED display.", img: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&q=80" },
+    { id: 7, name: "OnePlus 11 Pro", price: 199, category: "phone", desc: "Snapdragon 8 Gen 2, Hasselblad Camera for Mobile, and ultra-fast charging.", img: "https://images.unsplash.com/photo-1679875816599-1a2b3c4d5e6f?w=500&q=80" },
+    { id: 8, name: "Lenovo ThinkPad X1 Carbon", price: 299, category: "laptop", desc: "Business-class performance with a lightweight design and robust security features.", img: "https://images.unsplash.com/photo-1587825140708-1a2b3c4d5e6f?w=500&q=80" },
+    { id: 9, name: "Sony Xperia 1 IV", price: 500, category: "phone", desc: "4K HDR OLED display, pro-grade camera system, and high-fidelity audio.", img: "https://images.unsplash.com/photo-1682687226319-1a2b4c3d4e5f?w=500&q=80" },
+    { id: 10, name: "Asus ROG Zephyrus G14", price: 700, category: "laptop", desc: "Gaming powerhouse with AMD Ryzen processors and a stunning AniMe Matrix display.", img: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500&q=80"
     }
 ]);
 
